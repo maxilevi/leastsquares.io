@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+import TextLoop from "react-text-loop";
 
 class HeaderSection  extends React.Component
 {
@@ -119,9 +120,13 @@ export default class Hero extends React.Component
                         className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
                             <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                                High quality software development for your
-                                <br className="xl:hidden"></br>
-                                    <span className="text-indigo-600">business</span>
+                                { this.props.headerFirstLine }
+                                <br />
+                                <span className="text-indigo-600">
+                                    <TextLoop>
+                                        { this.props.headerSecondLineOptions.map((text) => (<span>{text}</span>) ) }
+                                    </TextLoop>
+                                </span>
                             </h2>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                                 { this.props.mainDescription }
