@@ -22,12 +22,12 @@ const headerSections = [
 ];
 
 const featureItems = [
-    {isFirst: true, title: 'Full-stack web development', description: 'Leverage modern front-end and back-end frameworks to create a unique experience for your users. We can build together a new webapp from scratch or work on an existing codebase.'},
-    {title: 'Mobile & Desktop applications', description: 'Provide the best user experience and accessibility to your customers and users with Android, iPhone and Tablets applications that integrate with your existing systems.'},
-    {title: 'Low-level applications', description: 'Need blazing fast, memory safe software? Our team can develop in C, C++, NASM and Rust.'},
-    {title: 'Game Development', description: 'We are knowledgeable in Unity, UE4 and Graphics Programming. We can help you create your own engine from scratch or use an existing engine to build the game.'},
-    {title: 'Machine Learning', description: 'Looking to solve a regression or a classification problem? Our team can leverage it\'s knowledge in Data Science to find a solution to your problem.'},
-    {title: 'Process Automation', description: 'We can help you automate your business processes so you focus on the product and enjoy increased productivity.'},
+    {isFirst: true, title: 'Full-stack web development', icon:'/assets/icons/desktop.svg', description: 'Leverage modern front-end and back-end frameworks to create a unique experience for your users. We can build together a new webapp from scratch or work on an existing codebase.'},
+    {title: 'Mobile & Desktop applications', icon:'/assets/icons/mobile.svg', description: 'Provide the best user experience and accessibility to your customers and users with Android, iPhone and Tablets applications that integrate with your existing systems.'},
+    {title: 'Low-level applications', icon:'/assets/icons/lowlevel.svg', description: 'Need blazing fast, memory safe software? Our team can develop in C, C++, NASM and Rust.'},
+    {title: 'Game Development', icon:'/assets/icons/game.svg', description: 'We are knowledgeable in Unity, UE4 and Graphics Programming. We can help you create your own engine from scratch or use an existing engine to build the game.'},
+    {title: 'Machine Learning', icon:'/assets/icons/machinelearning.svg', description: 'Looking to solve a regression or a classification problem? Our team can leverage it\'s knowledge in Data Science to find a solution to your problem.'},
+    {title: 'Process Automation', icon:'/assets/icons/process.svg', description: 'We can help you automate your business processes so you focus on the product and enjoy increased productivity.'},
 ];
 
 const portfolioWorks = [
@@ -51,7 +51,7 @@ const portfolioWorks = [
     },
     {
         projectName: 'Unity BreakableWallsFX',
-        projectImage: 'https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/7da47b1f-134b-4794-a5b0-db0345ee4e50.webp',
+        projectImage: '/assets/breakablewallsfx.png',
         projectDescription: 'Unity C# plugin that utilizes Delaunay triangulation in order to allow walls to be broken in pieces in realtime. It\'s currently published on the Unity Asset Store.',
         projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
     },
@@ -67,9 +67,27 @@ const portfolioWorks = [
         projectDescription: 'UE4 C++ plugin that leverages existing open-source technologies to allow the user to simplify meshes at runtime without a performance penalty. It\'s currently published on the UE4 Marketplace.',
         projectUrl: 'https://www.unrealengine.com/marketplace/en-US/product/9053712c939f4091a897913c095357aa'
     },
+    {
+        projectName: 'Unity FluidShaderFX',
+        projectImage: '/assets/fluidshaderfx.png',
+        projectDescription: 'Unity C# plugin that simulates fluids performantly in realtime, with cross-platform support. It\'s currently published on the Unity Asset Store.',
+        projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
+    },
+    {
+        projectName: 'Unity ToonShaderFX',
+        projectImage: '/assets/toonshaderfx.png',
+        projectDescription: 'Unity C# shader that utilizes cel shading techniques to achieve a toon effect in realtime, with cross-platform support. It\'s currently published on the Unity Asset Store.',
+        projectUrl: 'https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/toon-shader-fx-150115'
+    },
+    {
+        projectName: 'NotQuiteParadise',
+        projectImage: '/assets/nqp.png',
+        projectDescription: 'Open source 2D roguelike game made in Python. Core tasks were improving the overall quality of the codebase, implementing several core systems and adding missing infrastructure such as unit-testing.',
+        projectUrl: 'https://github.com/Snayff/notquiteparadise'
+    },
 ];
 
-
+//"https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
 function App() {
 
   return (
@@ -77,10 +95,10 @@ function App() {
           <Hero
               headerSections={headerSections}
               logoSource="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-              headerFirstLine="Software for your"
+              headerFirstLine="Software development for your"
               headerSecondLineOptions={["business", "idea", "project", "game", "app"]}
               mainDescription="LeastSquares is a professional software development company based in Buenos Aires, Argentina. We help customers focus on the idea while we focus on the execution."
-              sideImageSource="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+              sideImageSource={"assets/header.svg"}
           />
           <TrustedBy size={10} />
           <Features

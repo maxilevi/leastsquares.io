@@ -1,5 +1,5 @@
 import React from "react";
-
+//Trusted by over 5 very average small businesses
 export default class TrustedBy extends React.Component
 {
     render()
@@ -7,7 +7,7 @@ export default class TrustedBy extends React.Component
         return (<div className="bg-white">
             <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <p className="text-center text-base leading-6 font-semibold uppercase text-gray-600 tracking-wider">
-                    Trusted by over 5 very average small businesses
+
                 </p>
                 <div className="bg-white">
                     <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
