@@ -14,25 +14,27 @@ const companyCompleteName = companyName + ', Inc';
 const companySlogan = 'We find the solution that best minimizes all your problems.';
 
 const headerSections = [
-    {isFirst: true, name: 'Home', href: '#home'},
+    {isFirst: true, name: 'Home', href: '/'},
     {name: 'Services', href: '#services'},
     {name: 'Featured Work', href: '#portfolio'},
-    {name: 'Why Us', href: '#testimonials'},
-    {name: 'Contact', href: '#contact', color: 'indigo'}
+    {name: 'Blog', href: '/blog'},
+    {name: 'Contact', href: '/contact', color: 'indigo'}
 ];
 
 const featureItems = [
-    {isFirst: true, title: 'Full-stack web development', description: 'Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.'},
-    {title: 'Mobile applications', description: 'Provide the best user experience and accessibility to your customers and users with Android, iPhone and Tablets applications that integrate with your existing systems.'},
-    {title: 'Game Development', description: 'Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.'},
-    {title: 'Corporate tools', description: 'Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.'}
+    {isFirst: true, title: 'Full-stack web development', description: 'Leverage modern front-end and back-end frameworks to create a unique experience for your users. We can build together a new webapp from scratch or work on an existing codebase.'},
+    {title: 'Mobile & Desktop applications', description: 'Provide the best user experience and accessibility to your customers and users with Android, iPhone and Tablets applications that integrate with your existing systems.'},
+    {title: 'Low-level applications', description: 'Need blazing fast, memory safe software? Our team can develop in C, C++, NASM and Rust.'},
+    {title: 'Game Development', description: 'We are knowledgeable in Unity, UE4 and Graphics Programming. We can help you create your own engine from scratch or use an existing engine to build the game.'},
+    {title: 'Machine Learning', description: 'Looking to solve a regression or a classification problem? Our team can leverage it\'s knowledge in Data Science to find a solution to your problem.'},
+    {title: 'Process Automation', description: 'We can help you automate your business processes so you focus on the product and enjoy increased productivity.'},
 ];
 
 const portfolioWorks = [
     {
         projectName: 'Project Hedra',
         projectImage: '/assets/projecthedra.png',
-        projectDescription: 'Project Hedra is an ambitious open-world, low-poly RPG. Choose your class, explore endless procedurally generated worlds, unlock different skills and complete quests.',
+        projectDescription: 'Project Hedra is an ambitious open-world, low-poly RPG released on Steam. We built the game and the engine from scratch using OpenGL as the graphics API and BulletPhysics for the physics.',
         projectUrl: 'https://store.steampowered.com/app/1009960/Project_Hedra/'
     },
     {
@@ -46,6 +48,24 @@ const portfolioWorks = [
         projectImage: '/assets/farmtale.jpg',
         projectDescription: 'Integration of the Steam C++ statistics and achievements API into the game. Worked around the clock together with the Farmtale team to bring the game into a releasable state before it\'s launch on Steam.',
         projectUrl: 'https://store.steampowered.com/app/1231520/Farmtale/'
+    },
+    {
+        projectName: 'Unity BreakableWallsFX',
+        projectImage: 'https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/7da47b1f-134b-4794-a5b0-db0345ee4e50.webp',
+        projectDescription: 'Unity C# plugin that utilizes Delaunay triangulation in order to allow walls to be broken in pieces in realtime. It\'s currently published on the Unity Asset Store.',
+        projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
+    },
+    {
+        projectName: 'isosurface',
+        projectImage: '/assets/isosurface.png',
+        projectDescription: 'Academic web application that showcases different iso-surface extraction techniques on different volumes.',
+        projectUrl: 'https://github.com/maxilevi/isosurface'
+    },
+    {
+        projectName: 'UE4 RuntimeMeshSimplifier',
+        projectImage: '/assets/runtimemeshsimplifier.png',
+        projectDescription: 'UE4 C++ plugin that leverages existing open-source technologies to allow the user to simplify meshes at runtime without a performance penalty. It\'s currently published on the UE4 Marketplace.',
+        projectUrl: 'https://www.unrealengine.com/marketplace/en-US/product/9053712c939f4091a897913c095357aa'
     },
 ];
 
@@ -67,7 +87,7 @@ function App() {
               id="services"
               name="Services"
               title="What we do"
-              description="We aren't bound to a single industry. We adapt and learn fast which allows out team to different tasks."
+              description="We aren't bound to a single industry. We adapt and learn fast which allows us to work exceptionally well in a range of different fields."
               features={featureItems}
           />
           <SectionSeparator size={10} />

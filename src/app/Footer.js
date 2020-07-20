@@ -36,54 +36,12 @@ export default class Footer extends React.Component
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
                                 <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                                    Solutions
+                                    Services
                                 </h4>
                                 <ul className="mt-4">
                                     <li>
                                         <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                             Marketing
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Analytics
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Commerce
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Insights
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="mt-12 md:mt-0">
-                                <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                                    Support
-                                </h4>
-                                <ul className="mt-4">
-                                    <li>
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Pricing
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Documentation
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Guides
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            API Status
                                         </a>
                                     </li>
                                 </ul>
