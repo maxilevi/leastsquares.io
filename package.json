@@ -21,10 +21,7 @@
     "start": "npm run build:style && next start",
     "build": "next build",
     "export": "next export",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build:style && npm run build && npm run export"
   },
   "eslintConfig": {
     "extends": "react-app"
