@@ -33,24 +33,76 @@ class MobileHeaderSection extends HeaderSection
     }
 }
 
-
-export default class Hero extends React.Component
+class MobileMenu extends React.Component
 {
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        const desktopSections = this.props.headerSections.map((section) =>
-            <DesktopHeaderSection {...section} />
-        );
+    render()
+    {
         const mobileSections = this.props.headerSections.map((section) =>
             <MobileHeaderSection {...section} />
         );
 
         return (
-            <div className="relative bg-white overflow-hidden">
+            <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+                <div className="rounded-lg shadow-md">
+                    <div className="rounded-lg bg-white shadow-xs overflow-hidden" role="menu"
+                         aria-orientation="vertical" aria-labelledby="main-menu">
+                        <div className="px-5 pt-4 flex items-center justify-between">
+                            <div>
+                                <img className="h-8 w-auto"
+                                     src={this.props.logoSource} alt="">
+                                </img>
+                            </div>
+                            <div className="-mr-2">
+                                <button type="button"
+                                        onClick={this.props.onClose}
+                                        className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                                        aria-label="Close menu">
+                                    <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="px-2 pt-2 pb-3">
+                            { mobileSections }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+
+export default class Hero extends React.Component
+{
+    constructor(props)
+    {
+        super(props);
+        this.state = {isMobileMenuOpen: false};
+        this.handleMobileMenuOpen = this.handleMobileMenuOpen.bind(this);
+        this.handleMobileMenuClose = this.handleMobileMenuClose.bind(this);
+    }
+
+    handleMobileMenuOpen(e)
+    {
+        this.setState({isMobileMenuOpen: true});
+        console.log(this.state.isMobileMenuOpen);
+    }
+
+    handleMobileMenuClose(e)
+    {
+        this.setState({isMobileMenuOpen: false});
+        console.log(this.state.isMobileMenuOpen);
+    }
+
+    render()
+    {
+        const desktopSections = this.props.headerSections.map((section) =>
+            <DesktopHeaderSection {...section} />
+        );
+        return (
+        <div className="relative bg-white overflow-hidden">
             <div className="max-w-screen-xl mx-auto">
                 <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                     <svg
@@ -66,15 +118,16 @@ export default class Hero extends React.Component
                                     <a href="#" aria-label="Home">
                                         <img className="h-8 w-auto sm:h-10"
                                              src={this.props.logoSource}
-                                             alt="Logo"></img>
+                                             alt="Logo"/>
                                     </a>
                                     <div className="-mr-2 flex items-center md:hidden">
                                         <button type="button"
+                                                onClick={this.handleMobileMenuOpen}
                                                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                                                 id="main-menu" aria-label="Main menu" aria-haspopup="true">
                                             <svg className="h-6 w-6" stroke="currentColor" fill="none"
                                                  viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                                       d="M4 6h16M4 12h16M4 18h16"/>
                                             </svg>
                                         </button>
@@ -87,34 +140,7 @@ export default class Hero extends React.Component
                         </nav>
                     </div>
 
-                    <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-                        <div className="rounded-lg shadow-md">
-                            <div className="rounded-lg bg-white shadow-xs overflow-hidden" role="menu"
-                                 aria-orientation="vertical" aria-labelledby="main-menu">
-                                <div className="px-5 pt-4 flex items-center justify-between">
-                                    <div>
-                                        <img className="h-8 w-auto"
-                                             src={this.props.logoSource} alt="">
-                                        </img>
-                                    </div>
-                                    <div className="-mr-2">
-                                        <button type="button"
-                                                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                                                aria-label="Close menu">
-                                            <svg className="h-6 w-6" stroke="currentColor" fill="none"
-                                                 viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                      d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="px-2 pt-2 pb-3">
-                                    { mobileSections }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {this.state.isMobileMenuOpen && <MobileMenu onClose={this.handleMobileMenuClose} {...this.props} />}
 
                     <main
                         className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
@@ -123,9 +149,8 @@ export default class Hero extends React.Component
                                 { this.props.headerFirstLine }
                                 <br />
                                 <span className="text-indigo-600">
-                                    <TextLoop>
-                                        { this.props.headerSecondLineOptions.map((text) => (<span>{text}</span>) ) }
-                                    </TextLoop>
+                                    { !this.state.isMobileMenuOpen && <TextLoop children={this.props.headerSecondLineOptions} /> }
+                                    { this.state.isMobileMenuOpen && <span>{this.props.headerSecondLineOptions[0]}</span> }
                                 </span>
                             </h2>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">

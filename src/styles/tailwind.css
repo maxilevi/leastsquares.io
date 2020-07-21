@@ -37119,6 +37119,12 @@ video {
   transition-delay: 1000ms;
 }
 
+.grayscale {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 75%;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

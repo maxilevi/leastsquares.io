@@ -100,7 +100,7 @@ function App() {
               mainDescription="LeastSquares is a professional software development company based in Buenos Aires, Argentina. We help customers focus on the idea while we focus on the execution."
               sideImageSource={"assets/header.svg"}
           />
-          <TrustedBy size={10} />
+          <TrustedBy />
           <Features
               id="services"
               name="Services"

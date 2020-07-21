@@ -9,7 +9,7 @@ class FeatureItem extends React.Component {
                 <div className="flex">
                     <div className="flex-shrink-0">
                         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                            <img className="h-6 w-6 sm:h-6 text-white" src={this.props.icon} alt={ this.props.title } shape-rendering="crispEdges" type="image/svg+xml" />
+                            <img className="h-6 w-6 sm:h-6 text-white" src={this.props.icon} alt={ this.props.title } shapeRendering="crispEdges" type="image/svg+xml" />
 
                         </div>
                     </div>
