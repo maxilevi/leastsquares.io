@@ -36,7 +36,7 @@ export default class Contact extends React.Component
                         </p>
                     </div>
                     <div className="mt-12">
-                        <form action="#" method="POST" className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
+                        <form action="/contactSuccess" method="POST" netlify className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
                             <div>
                                 <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First
                                     name</label>
