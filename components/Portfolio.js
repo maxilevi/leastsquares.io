@@ -1,5 +1,68 @@
 import React from 'react'
 import Link from "next/link";
+import ContactForm from "./ContactForm";
+import SectionSeparator from "./SectionSeparator";
+
+
+const featuredPortfolioWorks = [
+    {
+        projectName: 'Project Hedra',
+        projectImage: '/assets/projecthedra.png',
+        projectDescription: 'Project Hedra is an ambitious open-world, low-poly RPG released on Steam. We built the game and the engine from scratch using OpenGL as the graphics API and BulletPhysics for the physics.',
+        projectUrl: 'https://store.steampowered.com/app/1009960/Project_Hedra/'
+    },
+    {
+        projectName: 'Hegemony',
+        projectImage: '/assets/hegemony.jpg',
+        projectDescription: 'Fullstack development for Hegemony\'s website. Improved & enhanced the existing Laravel codebase and added new features such as support for Stripe and PayPal subscriptions and purchases and a SSO integration with Hegemony\'s forum.',
+        projectUrl: 'https://hegemony.xyz'
+    },
+    {
+        projectName: 'Farmtale',
+        projectImage: '/assets/farmtale.jpg',
+        projectDescription: 'Integration of the Steam C++ statistics and achievements API into the game. Worked around the clock together with the Farmtale team to bring the game into a releasable state before it\'s launch on Steam.',
+        projectUrl: 'https://store.steampowered.com/app/1231520/Farmtale/'
+    },
+    {
+        projectName: 'Unity BreakableWallsFX',
+        projectImage: '/assets/breakablewallsfx.png',
+        projectDescription: 'Unity C# plugin that utilizes Delaunay triangulation in order to allow walls to be broken in pieces in realtime. It\'s currently published on the Unity Asset Store.',
+        projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
+    },
+    {
+        projectName: 'isosurface',
+        projectImage: '/assets/isosurface.png',
+        projectDescription: 'Academic web application that showcases different iso-surface extraction techniques on different volumes.',
+        projectUrl: 'https://github.com/maxilevi/isosurface'
+    },
+    {
+        projectName: 'UE4 RuntimeMeshSimplifier',
+        projectImage: '/assets/runtimemeshsimplifier.png',
+        projectDescription: 'UE4 C++ plugin that leverages existing open-source technologies to allow the user to simplify meshes at runtime without a performance penalty. It\'s currently published on the UE4 Marketplace.',
+        projectUrl: 'https://www.unrealengine.com/marketplace/en-US/product/9053712c939f4091a897913c095357aa'
+    },
+    {
+        projectName: 'Unity FluidShaderFX',
+        projectImage: '/assets/fluidshaderfx.png',
+        projectDescription: 'Unity C# plugin that simulates fluids performantly in realtime, with cross-platform support. It\'s currently published on the Unity Asset Store.',
+        projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
+    },
+    {
+        projectName: 'Unity ToonShaderFX',
+        projectImage: '/assets/toonshaderfx.png',
+        projectDescription: 'Unity C# shader that utilizes cel shading techniques to achieve a toon effect in realtime, with cross-platform support. It\'s currently published on the Unity Asset Store.',
+        projectUrl: 'https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/toon-shader-fx-150115'
+    },
+    {
+        projectName: 'NotQuiteParadise',
+        projectImage: '/assets/nqp.png',
+        projectDescription: 'Open source 2D roguelike game made in Python. Core tasks were improving the overall quality of the codebase, implementing several core systems and adding missing infrastructure such as unit-testing.',
+        projectUrl: 'https://github.com/Snayff/notquiteparadise'
+    },
+];
+
+const fullPortfolioWorks = featuredPortfolioWorks.concat([]);
+
 
 class PortfolioWork extends React.Component
 {
@@ -27,9 +90,83 @@ class PortfolioWork extends React.Component
     }
 }
 
-
-export default class Portfolio extends React.Component
+class ViewEntirePortfolioButton extends React.Component
 {
+    render() {
+        return (
+            <div className="mt-12">
+                <div className="sm:col-span-2 relative max-w-xl mx-auto">
+                    <Link href={this.props.url}>
+                        <a
+                            className="w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                            {this.props.text}
+                        </a>
+                    </Link>
+                </div>
+            </div>
+        );
+    }
+}
+
+class PortfolioText extends React.Component
+{
+    render() {
+        return (
+            <div className="relative max-w-7xl mx-auto">
+                <div className="text-center">
+                    <h2 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+                        {this.props.title}
+                    </h2>
+                    <p className="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
+                        {this.props.description}
+                    </p>
+                </div>
+            </div>
+        );
+    }
+}
+
+
+export class FeaturedPortfolio extends React.Component
+{
+
+    render()
+    {
+        return (
+            <Portfolio
+                portfolioWorks={featuredPortfolioWorks}
+                bottomElement={<ViewEntirePortfolioButton text={"View Entire Portfolio"} url={'/portfolio'} />}
+                {...this.props}
+            />
+        );
+    }
+}
+
+export default class FullPortfolio extends React.Component
+{
+
+    render()
+    {
+        var element = <div>
+            <SectionSeparator size={4} />
+            <PortfolioText title="Interested in learning more?" description="Whatever your ambition, we’d love to design and build your next big idea or lend a hand on an existing one." />
+            <ViewEntirePortfolioButton text={'Contact Us'} url={'contact'} />
+        </div>
+
+        return (
+            <Portfolio
+                portfolioWorks={fullPortfolioWorks}
+                bottomElement={element}
+                {...this.props}
+            />
+        );
+    }
+}
+
+
+class Portfolio extends React.Component
+{
+
     render()
     {
         const works = this.props.portfolioWorks.map((work) =>
@@ -40,29 +177,13 @@ export default class Portfolio extends React.Component
                 <div className="absolute inset-0">
                     <div className="bg-white h-1/3 sm:h-2/3"/>
                 </div>
+                <PortfolioText title={this.props.title} description={this.props.description} />
                 <div className="relative max-w-7xl mx-auto">
-                    <div className="text-center">
-                        <h2 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
-                            {this.props.title}
-                        </h2>
-                        <p className="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
-                            {this.props.description}
-                        </p>
-                    </div>
                     <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
                         { works }
                     </div>
                 </div>
-                <div className="mt-12">
-                    <div className="sm:col-span-2 relative max-w-xl mx-auto">
-                        <Link href="/portfolio">
-                            <a
-                               className="w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                                View Entire Portfolio
-                            </a>
-                        </Link>
-                    </div>
-                </div>
+                { this.props.bottomElement }
             </div>
         );
     }

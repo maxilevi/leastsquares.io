@@ -74,12 +74,12 @@ export default class Footer extends React.Component
                                 </h4>
                                 <ul className="mt-4">
                                     <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                        <a href="/privacy-terms" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                             Privacy
                                         </a>
                                     </li>
                                     <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                        <a href="/privacy-terms" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                             Terms
                                         </a>
                                     </li>

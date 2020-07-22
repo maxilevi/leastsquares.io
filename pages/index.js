@@ -1,11 +1,7 @@
 import React from 'react';
 import App from '../components/App';
 
-export default function Index()
+export default function IndexPage()
 {
-    return (
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
-    );
+    return <App />
 }
