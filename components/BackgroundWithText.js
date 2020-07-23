@@ -1,8 +1,11 @@
 import React from "react";
+import SectionSeparator from "./SectionSeparator";
 
 
 export default function BackgroundWithText(props)
 {
+    const element = props.element ?? <SectionSeparator size={15} />
+
     return (
         <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
             <div className="relative max-w-xl mx-auto">
@@ -34,7 +37,7 @@ export default function BackgroundWithText(props)
                         {props.description}
                     </p>
                 </div>
-                {props.element}
+                {element}
             </div>
         </div>
     );
