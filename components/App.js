@@ -40,6 +40,15 @@ export function AppFooter()
     />;
 }
 
+export function FullAppHeader(props)
+{
+    return <div className="relative bg-white overflow-hidden">
+        <div className="max-w-screen-xl mx-auto">
+            <AppHeader {...props} />
+        </div>
+    </div>
+}
+
 export function AppHeader(props)
 {
     return <Header
