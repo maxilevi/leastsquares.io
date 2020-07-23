@@ -8,7 +8,7 @@ export default class Footer extends React.Component
         <div className="bg-gray-800">
             <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-                    <div className="xl:col-span-1">
+                    <div className="xl:col-span-2">
                         <img className="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg"
                              alt={this.props.companyName}/>
                             <p className="mt-8 text-gray-500 text-base leading-6">
@@ -32,8 +32,8 @@ export default class Footer extends React.Component
                                 </a>
                             </div>
                     </div>
-                    <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                        <div className="md:grid md:grid-cols-3 md:gap-8">
+                    <div className="mt-12 grid grid-cols-1 gap-8 xl:mt-0 xl:col-span-1">
+                        <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
                                 <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
                                     Company

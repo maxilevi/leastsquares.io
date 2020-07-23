@@ -10,7 +10,6 @@ export default function Blog()
                 <BackgroundWithText
                     title="Our Blog"
                     description="Coming Soon"
-                    element={<div/>}
                 />
             }
         />
