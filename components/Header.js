@@ -108,7 +108,7 @@ export default class Header extends React.Component
                     <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
                         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
-                                <a href="#" aria-label="Home">
+                                <a href="/" aria-label="Home">
                                     <img className="h-8 w-auto sm:h-10"
                                          src={this.props.logoSource}
                                          alt="Logo"/>

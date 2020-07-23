@@ -36,34 +36,17 @@ export default class Footer extends React.Component
                         <div className="md:grid md:grid-cols-3 md:gap-8">
                             <div>
                                 <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
-                                    Services
-                                </h4>
-                                <ul className="mt-4">
-                                    <li>
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Marketing
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 className="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
                                     Company
                                 </h4>
                                 <ul className="mt-4">
                                     <li>
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                        <a href="/about" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                             About
                                         </a>
                                     </li>
                                     <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                                        <a href="/blog" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                                             Blog
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Why us
                                         </a>
                                     </li>
                                 </ul>

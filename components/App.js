@@ -23,17 +23,18 @@ const headerSections = [
 ];
 
 const featureItems = [
-    {isFirst: true, title: 'Full-stack web development', icon:'/assets/icons/desktop.svg', description: 'Leverage modern front-end and back-end frameworks to create a unique experience for your users. We can build together a new webapp from scratch or work on an existing codebase.'},
-    {title: 'Mobile & Desktop applications', icon:'/assets/icons/mobile.svg', description: 'Provide the best user experience and accessibility to your customers and users with Android, iPhone and Tablets applications that integrate with your existing systems.'},
-    {title: 'Low-level applications', icon:'/assets/icons/lowlevel.svg', description: 'Need blazing fast, memory safe software? Our team can develop in C, C++, NASM and Rust.'},
-    {title: 'Game Development', icon:'/assets/icons/game.svg', description: 'We are knowledgeable in Unity, UE4 and Graphics Programming. We can help you create your own engine from scratch or use an existing engine to build the game.'},
-    {title: 'Machine Learning', icon:'/assets/icons/machinelearning.svg', description: 'Looking to solve a regression or a classification problem? Our team can leverage it\'s knowledge in Data Science to find a solution to your problem.'},
-    {title: 'Process Automation', icon:'/assets/icons/process.svg', description: 'We can help you automate your business processes so you focus on the product and enjoy increased productivity.'},
+    {id:'full-stack-service', isFirst: true, title: 'Full-stack web development', icon:'/assets/icons/desktop.svg', description: 'Leverage modern front-end and back-end frameworks to create a unique experience for your users. We can build together a new webapp from scratch or work on an existing codebase.'},
+    {id:'desktop-service', title: 'Mobile & Desktop applications', icon:'/assets/icons/mobile.svg', description: 'Provide the best user experience and accessibility to your customers and users with Android, iPhone and Tablets applications that integrate with your existing systems.'},
+    {id:'low-level-service', title: 'Low-level applications', icon:'/assets/icons/lowlevel.svg', description: 'Need blazing fast, memory safe software? Our team can develop in C, C++, NASM and Rust.'},
+    {id:'game-service', title: 'Game Development', icon:'/assets/icons/game.svg', description: 'We are knowledgeable in Unity, UE4 and Graphics Programming. We can help you create your own engine from scratch or use an existing engine to build the game.'},
+    {id:'ml-service', title: 'Machine Learning', icon:'/assets/icons/machinelearning.svg', description: 'Looking to solve a regression or a classification problem? Our team can leverage it\'s knowledge in Data Science to find a solution to your problem.'},
+    {id:'process-service', title: 'Process Automation', icon:'/assets/icons/process.svg', description: 'We can help you automate your business processes so you focus on the product and enjoy increased productivity.'},
 ];
 
 export function AppFooter()
 {
     return <Footer
+        services={featureItems}
         companyName={companyName}
         companyCompleteName={companyCompleteName}
         companySlogan={companySlogan}

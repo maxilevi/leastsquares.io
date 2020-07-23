@@ -5,7 +5,7 @@ class FeatureItem extends React.Component {
     {
         const isFirst = this.props.isFirst ?? false;
         return (
-            <li className={(isFirst ? 'mt-10 md:mt-0' : '')}>
+            <li className={(isFirst ? 'mt-10 md:mt-0' : '')} id={this.props.id}>
                 <div className="flex">
                     <div className="flex-shrink-0">
                         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
