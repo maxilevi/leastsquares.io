@@ -7,7 +7,7 @@ import SectionSeparator from "./SectionSeparator";
 const featuredPortfolioWorks = [
     {
         projectName: 'Project Hedra',
-        projectImage: '/assets/projecthedra.png',
+        projectImage: '/assets/projecthedra.jpg',
         projectDescription: 'Project Hedra is an ambitious open-world, low-poly RPG released on Steam. We built the game and the engine from scratch using OpenGL as the graphics API and BulletPhysics for the physics.',
         projectUrl: 'https://store.steampowered.com/app/1009960/Project_Hedra/'
     },
@@ -25,37 +25,37 @@ const featuredPortfolioWorks = [
     },
     {
         projectName: 'Unity BreakableWallsFX',
-        projectImage: '/assets/breakablewallsfx.png',
+        projectImage: '/assets/breakablewallsfx.jpg',
         projectDescription: 'Unity C# plugin that utilizes Delaunay triangulation in order to allow walls to be broken in pieces in realtime. It\'s currently published on the Unity Asset Store.',
         projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
     },
     {
         projectName: 'isosurface',
-        projectImage: '/assets/isosurface.png',
+        projectImage: '/assets/isosurface.jpg',
         projectDescription: 'Academic web application that showcases different iso-surface extraction techniques on different volumes.',
         projectUrl: 'https://github.com/maxilevi/isosurface'
     },
     {
         projectName: 'UE4 RuntimeMeshSimplifier',
-        projectImage: '/assets/runtimemeshsimplifier.png',
+        projectImage: '/assets/runtimemeshsimplifier.jpg',
         projectDescription: 'UE4 C++ plugin that leverages existing open-source technologies to allow the user to simplify meshes at runtime without a performance penalty. It\'s currently published on the UE4 Marketplace.',
         projectUrl: 'https://www.unrealengine.com/marketplace/en-US/product/9053712c939f4091a897913c095357aa'
     },
     {
         projectName: 'Unity FluidShaderFX',
-        projectImage: '/assets/fluidshaderfx.png',
+        projectImage: '/assets/fluidshaderfx.jpg',
         projectDescription: 'Unity C# plugin that simulates fluids performantly in realtime, with cross-platform support. It\'s currently published on the Unity Asset Store.',
         projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
     },
     {
         projectName: 'Unity ToonShaderFX',
-        projectImage: '/assets/toonshaderfx.png',
+        projectImage: '/assets/toonshaderfx.jpg',
         projectDescription: 'Unity C# shader that utilizes cel shading techniques to achieve a toon effect in realtime, with cross-platform support. It\'s currently published on the Unity Asset Store.',
         projectUrl: 'https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/toon-shader-fx-150115'
     },
     {
         projectName: 'NotQuiteParadise',
-        projectImage: '/assets/nqp.png',
+        projectImage: '/assets/nqp.jpg',
         projectDescription: 'Open source 2D roguelike game made in Python. Core tasks were improving the overall quality of the codebase, implementing several core systems and adding missing infrastructure such as unit-testing.',
         projectUrl: 'https://github.com/Snayff/notquiteparadise'
     },

@@ -21,7 +21,7 @@ class Logo extends React.Component
     {
         return (
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img className="h-16 language-logo" src={this.props.url} alt={this.props.name}/>
+                <img className="h-16" src={this.props.url} alt={this.props.name}/>
             </div>
         );
     }
