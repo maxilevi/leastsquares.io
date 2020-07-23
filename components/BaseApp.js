@@ -2,9 +2,10 @@ import {AppFooter, FullAppHeader} from "./App";
 import React from "react";
 
 
-export default class BaseApp
+export default class BaseApp extends React.Component
 {
-    render() {
+    render()
+    {
         return (
             <div>
                 <FullAppHeader />
