@@ -17,7 +17,7 @@ export default class ContactForm extends React.Component
                                 <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First
                                     name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="first_name" required="true"
+                                    <input id="first_name" name="first_name" required="true"
                                            className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"/>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@ export default class ContactForm extends React.Component
                                 <label htmlFor="last_name" className="block text-sm font-medium leading-5 text-gray-700">Last
                                     name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="last_name" required="true"
+                                    <input id="last_name" name="last_name" required="true"
                                            className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"/>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ export default class ContactForm extends React.Component
                                 <label htmlFor="company"
                                        className="block text-sm font-medium leading-5 text-gray-700">Company (Optional)</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="company"
+                                    <input id="company"  name="company"
                                            className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"/>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@ export default class ContactForm extends React.Component
                                 <label htmlFor="email"
                                        className="block text-sm font-medium leading-5 text-gray-700">Email</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="email" type="email" required="true"
+                                    <input id="email" type="email" required="true" name="email"
                                            className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"/>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ export default class ContactForm extends React.Component
                                 <label htmlFor="message"
                                        className="block text-sm font-medium leading-5 text-gray-700">Message</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <textarea id="message" required="true" rows="4"
+                                    <textarea id="message" required="true" rows="4" name="message"
                                               className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
                                 </div>
                             </div>
