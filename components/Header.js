@@ -6,7 +6,7 @@ class HeaderSection  extends React.Component
     getJSX(isFirst, color, href, name){}
 
     render() {
-        const color = this.props.color ?? 'gray';
+        const color = this.props.color ?? 'gray'; // 'gray'
         const isFirst = this.props.isFirst ?? false;
         return this.getJSX(isFirst, color, this.props.href, this.props.name);
     }
@@ -48,7 +48,7 @@ class MobileMenu extends React.Component
                          aria-orientation="vertical" aria-labelledby="main-menu">
                         <div className="px-5 pt-4 flex items-center justify-between">
                             <div>
-                                <img className="h-8 w-auto"
+                                <img className="h-12 w-auto"
                                      src={this.props.logoSource} alt="">
                                 </img>
                             </div>
@@ -63,7 +63,7 @@ class MobileMenu extends React.Component
                                 </button>
                             </div>
                         </div>
-                        <div className="px-2 pt-2 pb-3">
+                        <div className="px-2 pt-2 pb-3 text-sm">
                             { mobileSections }
                         </div>
                     </div>
@@ -88,13 +88,15 @@ export default class Header extends React.Component
     handleMobileMenuOpen(e)
     {
         this.setState({isMobileMenuOpen: true});
-        this.props.onMenuStateChange(true);
+        if(this.props.onMenuStateChange)
+            this.props.onMenuStateChange(true);
     }
 
     handleMobileMenuClose(e)
     {
         this.setState({isMobileMenuOpen: false});
-        this.props.onMenuStateChange(false);
+        if(this.props.onMenuStateChange)
+            this.props.onMenuStateChange(false);
     }
 
     render()
@@ -103,13 +105,13 @@ export default class Header extends React.Component
             <DesktopHeaderSection {...section} />
         );
         return (
-            <div>
+            <>
                 <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-                    <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
+                    <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start pb-6 pt-6">
                         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
                                 <a href="/" aria-label="Home">
-                                    <img className="h-10 w-auto"
+                                    <img className="h-12 w-auto"
                                          src={this.props.logoSource}
                                          alt="Logo"/>
                                 </a>
@@ -132,9 +134,9 @@ export default class Header extends React.Component
                         </div>
                     </nav>
                 </div>
-
+                { this.props.content }
                 {this.state.isMobileMenuOpen && <MobileMenu onClose={this.handleMobileMenuClose} {...this.props} />}
-            </div>
+            </>
         );
     }
 }

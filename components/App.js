@@ -18,8 +18,7 @@ const logoSourceVertical = "assets/logo_vertical.svg";//"https://tailwindui.com/
 const logoSourceHorizontal = "assets/logo_white_horizontal.svg";
 
 const headerSections = [
-    {isFirst: true, name: 'Home', href: '/'},
-    {name: 'Services', href: '/#services'},
+    {isFirst: true, name: 'Services', href: '/#services'},
     {name: 'Our Work', href: '/portfolio'},
     {name: 'Blog', href: '/blog'},
     {name: 'Contact', href: '/contact', color: 'indigo'}
@@ -75,6 +74,7 @@ export function AppHeader(props)
         onMenuStateChange={props.onMenuStateChange}
         headerSections={headerSections}
         logoSource={logoSourceVertical}
+        content={props.content}
     />;
 }
 
