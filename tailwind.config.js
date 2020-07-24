@@ -4,7 +4,7 @@ module.exports = {
         './components/**/*.js',
         './pages/**/*.js',
     ],
-    enabled: true
+    enabled: false
   },
   theme: {
     extend: {},
