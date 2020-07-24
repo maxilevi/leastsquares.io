@@ -6,6 +6,7 @@ export default function Blog()
 {
     return (
         <BaseApp
+            title="Successful submit"
             main={
                 <BackgroundWithText
                     title="Thank you for reaching out!"

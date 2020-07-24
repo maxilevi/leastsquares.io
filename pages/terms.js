@@ -7,6 +7,7 @@ export default class Terms extends React.Component {
     render() {
         return (
             <BaseApp
+                title="Terms of Service"
                 main={
                     <BackgroundWithText
                         title="Terms of Service"

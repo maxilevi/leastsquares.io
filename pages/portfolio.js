@@ -6,6 +6,7 @@ export default function Contact()
 {
     return (
         <BaseApp
+            title="Our Work"
             main={
                 <FullPortfolio
                     title="Our Work"

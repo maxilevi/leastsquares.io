@@ -9,10 +9,13 @@ import TrustedBy from "./TrustedBy";
 import ContactForm from "./ContactForm";
 import CallToAction from "./CallToAction";
 import Header from "./Header";
+import Head from "next/head";
 
 const companyName = 'LeastSquares';
 const companyCompleteName = companyName + ', Inc';
 const companySlogan = 'We find the solution that best minimizes all your problems.';
+const logoSourceVertical = "assets/logo_vertical.svg";//"https://tailwindui.com/img/logos/workflow-mark-on-white.svg";
+const logoSourceHorizontal = "assets/logo_white_horizontal.svg";
 
 const headerSections = [
     {isFirst: true, name: 'Home', href: '/'},
@@ -34,6 +37,7 @@ const featureItems = [
 export function AppFooter()
 {
     return <Footer
+        logoSource={logoSourceHorizontal}
         services={featureItems}
         companyName={companyName}
         companyCompleteName={companyCompleteName}
@@ -41,13 +45,28 @@ export function AppFooter()
     />;
 }
 
+function AppHead(props)
+{
+    return <Head>
+        <title>{props.title}</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content={props.description ?? companySlogan} />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>;
+}
+
 export function FullAppHeader(props)
 {
-    return <div className="relative bg-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto">
-            <AppHeader {...props} />
+    return(
+        <div>
+            <AppHead {...props} />
+            <div className="relative bg-white overflow-hidden">
+                <div className="max-w-screen-xl mx-auto">
+                    <AppHeader {...props} />
+                </div>
+            </div>
         </div>
-    </div>
+    );
 }
 
 export function AppHeader(props)
@@ -55,7 +74,7 @@ export function AppHeader(props)
     return <Header
         onMenuStateChange={props.onMenuStateChange}
         headerSections={headerSections}
-        logoSource="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
+        logoSource={logoSourceVertical}
     />;
 }
 
@@ -77,6 +96,9 @@ export default class App extends React.Component
     {
         return (
             <div>
+                <AppHead
+                    title={companyName + ": " + companySlogan}
+                />
                 <Hero
                     headerElement={<AppHeader onMenuStateChange={this.onMenuStateChanged} />}
                     isMobileMenuOpen={this.state.isMobileMenuOpen}

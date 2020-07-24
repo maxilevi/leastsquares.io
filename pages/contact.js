@@ -6,6 +6,7 @@ export default function Contact()
 {
     return (
         <BaseApp
+            title="Contact"
             main={
                 <ContactForm/>
             }

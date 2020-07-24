@@ -8,7 +8,7 @@ export default class BaseApp extends React.Component
     {
         return (
             <div>
-                <FullAppHeader />
+                <FullAppHeader title={this.props.title} />
                 {this.props.main}
                 <AppFooter />
             </div>

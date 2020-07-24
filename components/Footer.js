@@ -9,7 +9,7 @@ export default class Footer extends React.Component
             <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="xl:col-span-2">
-                        <img className="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg"
+                        <img className="h-10" src={this.props.logoSource}
                              alt={this.props.companyName}/>
                             <p className="mt-8 text-gray-500 text-base leading-6">
                                 {this.props.companySlogan}

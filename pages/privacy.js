@@ -11,6 +11,7 @@ export default class Privacy extends React.Component {
         return (
             <div>
                 <BaseApp
+                    title="Privacy Policy"
                     main={
                         <BackgroundWithText
                             title="Privacy Policy"

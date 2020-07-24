@@ -6,6 +6,7 @@ export default function Blog()
 {
     return (
         <BaseApp
+            title="About us"
             main={
                 <BackgroundWithText
                     title="About us"
