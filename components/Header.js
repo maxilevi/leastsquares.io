@@ -111,7 +111,7 @@ export default class Header extends React.Component
                         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div className="flex items-center justify-between w-full md:w-auto">
                                 <a href="/" aria-label="Home">
-                                    <img className="h-12 w-auto"
+                                    <img className="h-15 w-auto"
                                          src={this.props.logoSource}
                                          alt="Logo"/>
                                 </a>

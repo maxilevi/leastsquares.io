@@ -6,7 +6,7 @@ import {FeaturedPortfolio} from "./Portfolio";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import TrustedBy from "./TrustedBy";
-import ContactForm from "./ContactForm";
+import ContactSection from "./ContactSection";
 import CallToAction from "./CallToAction";
 import Header from "./Header";
 import Head from "next/head";
@@ -18,7 +18,7 @@ const logoSourceVertical = "assets/logo_vertical.svg";//"https://tailwindui.com/
 const logoSourceHorizontal = "assets/logo_white_horizontal.svg";
 
 const headerSections = [
-    {isFirst: true, name: 'Services', href: '/#services'},
+    {isFirst: true, name: 'What we do', href: '/services'},
     {name: 'Our Work', href: '/portfolio'},
     {name: 'Blog', href: '/blog'},
     {name: 'Contact', href: '/contact', color: 'indigo'}
@@ -48,6 +48,7 @@ function AppHead(props)
 {
     return <Head>
         <title>{props.title}</title>
+        <link rel="icon" href="favicon.svg" />
         <meta charSet="utf-8" />
         <meta name="description" content={props.description ?? companySlogan} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -61,8 +62,9 @@ export function FullAppHeader(props)
             <AppHead {...props} />
             <div className="relative bg-white overflow-hidden">
                 <div className="max-w-screen-xl mx-auto">
-                    <AppHeader {...props} />
+                    <AppHeader {...props} content={<></>} />
                 </div>
+                {props.content}
             </div>
         </div>
     );
@@ -105,7 +107,7 @@ export default class App extends React.Component
                     headerFirstLine="Software development for your"
                     headerSecondLineOptions={["business", "idea", "project", "game", "app"]}
                     mainDescription="LeastSquares is a professional software development company based in Buenos Aires, Argentina. We help customers focus on the idea while we focus on the execution."
-                    sideImageSource={"assets/header.svg"}
+                    sideImageSource={"assets/illustrations/header.svg"}
                 />
                 <TrustedBy/>
                 <Features

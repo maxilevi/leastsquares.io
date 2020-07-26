@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from "next/link";
-import ContactForm from "./ContactForm";
+import ContactSection from "./ContactSection";
 import SectionSeparator from "./SectionSeparator";
+import BackgroundPattern from "./BackgroundPattern";
+import SmallHero from "./SmallHero";
+import InterestedInLearningMore from "./InterestedInLearningMore";
 
 
 const featuredPortfolioWorks = [
@@ -41,6 +44,9 @@ const featuredPortfolioWorks = [
         projectDescription: 'UE4 C++ plugin that leverages existing open-source technologies to allow the user to simplify meshes at runtime without a performance penalty. It\'s currently published on the UE4 Marketplace.',
         projectUrl: 'https://www.unrealengine.com/marketplace/en-US/product/9053712c939f4091a897913c095357aa'
     },
+];
+
+const extraPortfolioWorks = [
     {
         projectName: 'Unity FluidShaderFX',
         projectImage: '/assets/fluidshaderfx.jpg',
@@ -58,10 +64,10 @@ const featuredPortfolioWorks = [
         projectImage: '/assets/nqp.jpg',
         projectDescription: 'Open source 2D roguelike game made in Python. Core tasks were improving the overall quality of the codebase, implementing several core systems and adding missing infrastructure such as unit-testing.',
         projectUrl: 'https://github.com/Snayff/notquiteparadise'
-    },
+    }
 ];
 
-const fullPortfolioWorks = featuredPortfolioWorks.concat([]);
+const fullPortfolioWorks = featuredPortfolioWorks.concat(extraPortfolioWorks);
 
 
 class PortfolioWork extends React.Component
@@ -90,7 +96,7 @@ class PortfolioWork extends React.Component
     }
 }
 
-class ViewEntirePortfolioButton extends React.Component
+export class ViewEntirePortfolioButton extends React.Component
 {
     render() {
         return (
@@ -108,7 +114,7 @@ class ViewEntirePortfolioButton extends React.Component
     }
 }
 
-class PortfolioText extends React.Component
+export class PortfolioText extends React.Component
 {
     render() {
         return (
@@ -135,7 +141,7 @@ export class FeaturedPortfolio extends React.Component
         return (
             <Portfolio
                 portfolioWorks={featuredPortfolioWorks}
-                bottomElement={<ViewEntirePortfolioButton text={"View Entire Portfolio"} url={'/portfolio'} />}
+                bottomElement={<ViewEntirePortfolioButton text={"See our work"} url={'/portfolio'} />}
                 {...this.props}
             />
         );
@@ -149,16 +155,20 @@ export default class FullPortfolio extends React.Component
     {
         var element = <div>
             <SectionSeparator size={4} />
-            <PortfolioText title="Interested in learning more?" description="Whatever your ambition, we’d love to design and build your next big idea or lend a hand on an existing one." />
-            <ViewEntirePortfolioButton text={'Contact Us'} url={'contact'} />
+            <InterestedInLearningMore />
         </div>
 
         return (
+            <>
+            <SmallHero {...this.props} sourceImage="assets/illustrations/portfolio.svg" />
             <Portfolio
                 portfolioWorks={fullPortfolioWorks}
                 bottomElement={element}
                 {...this.props}
+                description="Description"
+                title="Title"
             />
+            </>
         );
     }
 }
@@ -173,7 +183,7 @@ class Portfolio extends React.Component
             <PortfolioWork {...work} />
         );
         return (
-            <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" id={this.props.id}>
+        <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" id={this.props.id}>
                 <div className="absolute inset-0">
                     <div className="bg-white h-1/3 sm:h-2/3"/>
                 </div>
@@ -182,6 +192,7 @@ class Portfolio extends React.Component
                     <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
                         { works }
                     </div>
+                    <BackgroundPattern />
                 </div>
                 { this.props.bottomElement }
             </div>

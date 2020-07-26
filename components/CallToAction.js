@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactForm from "./ContactForm";
+import ContactSection from "./ContactSection";
 
 export default class CallToAction extends React.Component
 {
@@ -7,7 +7,7 @@ export default class CallToAction extends React.Component
     {
         return (
             <div className="bg-white">
-                <ContactForm/>
+                <ContactSection/>
             </div>
         );
     }
