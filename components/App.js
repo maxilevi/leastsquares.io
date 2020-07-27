@@ -19,8 +19,9 @@ const logoSourceHorizontal = "assets/logo_white_horizontal.svg";
 
 const headerSections = [
     {isFirst: true, name: 'What we do', href: '/services'},
-    {name: 'Our Work', href: '/portfolio'},
-    {name: 'Blog', href: '/blog'},
+    {name: 'Our work', href: '/portfolio'},
+    {name: 'Why us', href: '/why-us'},
+    //{name: 'Blog', href: '/blog'},
     {name: 'Contact', href: '/contact', color: 'indigo'}
 ];
 

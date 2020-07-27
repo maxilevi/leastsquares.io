@@ -1,5 +1,17 @@
 import React from 'react'
 
+function FooterLink(props)
+{
+    return (
+        <li className="mt-4">
+            <a href={props.href} className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                {props.text}
+            </a>
+        </li>
+    );
+}
+
+
 export default class Footer extends React.Component
 {
     render()
@@ -39,16 +51,10 @@ export default class Footer extends React.Component
                                     Company
                                 </h4>
                                 <ul className="mt-4">
-                                    <li>
-                                        <a href="/about" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            About
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="/blog" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Blog
-                                        </a>
-                                    </li>
+                                    <FooterLink href="/services" text="What we do" />
+                                    <FooterLink href="/why-us" text="Why us" />
+                                    <FooterLink href="/about" text="About" />
+                                    <FooterLink href="/contact" text="Contact" />
                                 </ul>
                             </div>
                             <div className="mt-12 md:mt-0">
@@ -56,16 +62,8 @@ export default class Footer extends React.Component
                                     Legal
                                 </h4>
                                 <ul className="mt-4">
-                                    <li className="mt-4">
-                                        <a href="/privacy" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Privacy
-                                        </a>
-                                    </li>
-                                    <li className="mt-4">
-                                        <a href="/terms" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                                            Terms
-                                        </a>
-                                    </li>
+                                    <FooterLink href="/privacy" text="Privacy" />
+                                    <FooterLink href="/terms" text="Terms" />
                                 </ul>
                             </div>
                         </div>

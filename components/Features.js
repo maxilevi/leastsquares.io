@@ -1,6 +1,6 @@
 import React from "react";
 
-class FeatureItem extends React.Component {
+export class FeatureItem extends React.Component {
     render ()
     {
         const isFirst = this.props.isFirst ?? false;

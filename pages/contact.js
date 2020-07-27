@@ -15,7 +15,7 @@ export default function Contact()
                     <SmallHero
                         title="Let’s build something great together"
                         description="Whatever your ambition, we’d love to design and build your next big idea or lend a hand on an existing one."
-                        sourceImage="assets/illustrations/undraw_good_team_m7uu.svg"
+                        sourceImage="assets/illustrations/contact.svg"
                     />
                     <BackgroundWithText
                         title="Tell us how we can help"
