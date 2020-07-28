@@ -28,17 +28,17 @@ export default function WhyUs()
                     <DefaultFeaturePage
                         columns={
                             <div>
-                                <LeftFeatureContent
+                                <RightFeatureContent
                                     title="Always at your service"
                                     description="From research to vision to implementation we can translate ideas into fully working products."
                                     srcImage="assets/illustrations/create.svg"
                                 />
-                                <RightFeatureContent
+                                <LeftFeatureContent
                                     title="Full-service, full-stack"
                                     description="Everything under one roof means less risk and a cohesive team to ensure forward momentum."
                                     srcImage="assets/illustrations/developapp.svg"
                                 />
-                                <LeftFeatureContent
+                                <RightFeatureContent
                                     title="High quality software, always"
                                     description="We make no excuses. We build forward looking maintainable software, we believe products should be bug free and resilient to future upgrades."
                                     srcImage="assets/illustrations/highquality.svg"

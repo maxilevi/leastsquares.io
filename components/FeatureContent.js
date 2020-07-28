@@ -10,7 +10,7 @@ export function RightFeatureContent(props)
     );
 
     return (
-        <div className="relative mt-8 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-32 lg:items-center bg-gray-100 p-12">
+        <div className="relative mt-8 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-32 lg:items-center bg-gray-50 p-12">
             <div className="mt-4 -mx-4 relative lg:col-start-1">
                 <img className="relative mx-auto" width="490"
                      src={props.srcImage} alt="" />
