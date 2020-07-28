@@ -20,8 +20,8 @@ export default function WhyUs()
                         sourceImage="assets/illustrations/whyus.svg"
                     />
                     <BackgroundWithText
-                        title="Title"
-                        description="Description"
+                        title="Because we take the weight off your shoulders."
+                        description="We help you focus on the important things while we handle the rest."
                         padding={0}
                         element={<div/>}
                     />
@@ -31,14 +31,17 @@ export default function WhyUs()
                                 <LeftFeatureContent
                                     title="Always at your service"
                                     description="From research to vision to implementation we can translate ideas into fully working products."
+                                    srcImage="assets/illustrations/create.svg"
                                 />
                                 <RightFeatureContent
                                     title="Full-service, full-stack"
                                     description="Everything under one roof means less risk and a cohesive team to ensure forward momentum."
+                                    srcImage="assets/illustrations/developapp.svg"
                                 />
                                 <LeftFeatureContent
-                                    title="Bleeding-edge, razor-sharp software"
-                                    description="Description"
+                                    title="High quality software, always"
+                                    description="We make no excuses. We build forward looking maintainable software, we believe products should be bug free and resilient to future upgrades."
+                                    srcImage="assets/illustrations/highquality.svg"
                                 />
                             </div>
                         }

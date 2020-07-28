@@ -10,7 +10,7 @@ export default function BackgroundWithText(props)
     return (
         <div className={"bg-white py-" + padding + " px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-" + padding}>
             <div className="relative max-w-xl mx-auto">
-                <BackgroundPattern />
+                {!props.hidePattern && <BackgroundPattern /> }
                 <div className="text-center">
                     <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
                         {props.title}

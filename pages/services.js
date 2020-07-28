@@ -5,6 +5,7 @@ import SmallHero from "../components/SmallHero";
 import SectionSeparator from "../components/SectionSeparator";
 import InterestedInLearningMore from "../components/InterestedInLearningMore";
 import LeftFeatureContent, {RightFeatureContent} from "../components/FeatureContent";
+import BackgroundPattern from "../components/BackgroundPattern";
 
 export function DefaultFeaturePage(props)
 {
@@ -35,6 +36,20 @@ function FeatureContent()
         <DefaultFeaturePage
             columns={
                 <div>
+                    <svg className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
+                         width="404" height="784" fill="none" viewBox="0 0 404 784">
+                        <defs>
+                            <pattern id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7" x="0" y="0" width="20" height="20"
+                                     patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" className="text-gray-200" fill="currentColor"/>
+                            </pattern>
+                        </defs>
+                        <rect width="404" height="784" fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"/>
+                    </svg>
+                    <BackgroundPattern
+                        leftClass="absolute left-full transform translate-x-1/2"
+                        rightClass="absolute right-full bottom-0 transform -translate-x-1/2"
+                    />
                     <RightFeatureContent
                         title="Full-stack web development"
                         description="Leverage modern front-end and back-end frameworks to create a unique experience for your users. We can build together a new webapp from scratch or work on an existing codebase."
@@ -86,10 +101,11 @@ export default function Blog()
                     />
                     <SectionSeparator size={1} />
                     <BackgroundWithText
-                        title="Title"
-                        description="We can tackle any problem. Here is a list of areas we are the most familiar with."
+                        title="We create solutions for your problems."
+                        description="We can tackle any challenge. Here is a list of areas we are the most familiar with."
                         padding={0}
                         element={<div/>}
+                        hidePatterns={true}
                     />
                     <FeatureContent />
                     <SectionSeparator size={6} />
