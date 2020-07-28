@@ -20,7 +20,7 @@ export default class Terms extends React.Component {
                                             1. Terms
                                         </h3>
                                         <p>
-                                            By accessing the website at https://leastsquares.com, you are
+                                            By accessing the website at https://leastsquares.io, you are
                                             agreeing to be bound by these terms of service, all
                                             applicable laws and regulations, and agree that you are
                                             responsible for compliance with any applicable local laws.

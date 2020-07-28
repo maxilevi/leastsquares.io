@@ -16,12 +16,12 @@ export default function WhyUs()
                 <div>
                     <SmallHero
                         title="Why us"
-                        description="We translate your idea into meaningful impact for you and your audience."
+                        description="Because we translate your idea into meaningful impact for you and your audience."
                         sourceImage="assets/illustrations/whyus.svg"
                     />
                     <BackgroundWithText
                         title="Because we take the weight off your shoulders."
-                        description="We help you focus on the important things while we handle the rest."
+                        description="You can focus on the important things while we handle the rest."
                         padding={0}
                         element={<div/>}
                     />
@@ -40,7 +40,7 @@ export default function WhyUs()
                                 />
                                 <RightFeatureContent
                                     title="High quality software, always"
-                                    description="We make no excuses. We build forward looking maintainable software, we believe products should be bug free and resilient to future upgrades."
+                                    description="We build maintainable forward-looking software. We believe products should be bug free and resilient to future upgradesWe create."
                                     srcImage="assets/illustrations/highquality.svg"
                                 />
                             </div>

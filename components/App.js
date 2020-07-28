@@ -126,7 +126,7 @@ export default class App extends React.Component
                 />
                 <SectionSeparator />
                 <CallToAction/>
-                <SectionSeparator />
+                <SectionSeparator size={2} />
                 {/*<Testimonials
               id="testimonials"
           />

@@ -102,7 +102,7 @@ export default function Blog()
                     <SectionSeparator size={1} />
                     <BackgroundWithText
                         title="We create solutions for your problems."
-                        description="We can tackle any challenge. Here is a list of areas we are the most familiar with."
+                        description="We can tackle any challenge."
                         padding={0}
                         element={<div/>}
                         hidePatterns={true}

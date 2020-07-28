@@ -4,6 +4,7 @@ import BaseApp from "../components/BaseApp";
 import ContactForm from "../components/ContactForm";
 import BackgroundWithText from "../components/BackgroundWithText";
 import SmallHero from "../components/SmallHero";
+import SectionSeparator from "../components/SectionSeparator";
 
 export default function Contact()
 {
@@ -18,12 +19,13 @@ export default function Contact()
                         sourceImage="assets/illustrations/contact.svg"
                     />
                     <BackgroundWithText
-                        title="Tell us how we can help"
+                        title="Tell us how we can help."
                         description="We will analyze your problem and propose you a solution."
                         element={
                             <ContactForm />
                         }
                     />
+                    <SectionSeparator size={2} />
                 </div>
             }
         />
