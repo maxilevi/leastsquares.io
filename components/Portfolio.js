@@ -141,7 +141,7 @@ export class FeaturedPortfolio extends React.Component
         return (
             <Portfolio
                 portfolioWorks={featuredPortfolioWorks}
-                bottomElement={<ViewEntirePortfolioButton text={"See more"} url={'/portfolio'} />}
+                bottomElement={<ViewEntirePortfolioButton text={"See our work"} url={'/portfolio'} />}
                 {...this.props}
             />
         );
