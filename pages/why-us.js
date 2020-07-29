@@ -40,7 +40,7 @@ export default function WhyUs()
                                 />
                                 <RightFeatureContent
                                     title="High quality software, always"
-                                    description="We build maintainable forward-looking software. We believe products should be bug free and resilient to future upgradesWe create."
+                                    description="We build maintainable forward-looking software. We believe products should be bug free and resilient to future upgrades."
                                     srcImage="assets/illustrations/highquality.svg"
                                 />
                             </div>
