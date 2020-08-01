@@ -73,6 +73,14 @@ export function FullAppHeader(props)
 
 export function AppHeader(props)
 {
+    var sections = headerSections.slice();
+    for (var i = 0; i < sections.length; ++i)
+    {
+        sections[i].color = 'gray';
+        if(props.title === sections[i].name)
+            sections[i].color = 'indigo';
+    }
+
     return <Header
         onMenuStateChange={props.onMenuStateChange}
         headerSections={headerSections}
