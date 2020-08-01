@@ -6,7 +6,7 @@ export default class ContactForm extends React.Component
     {
         return (
             <div className="mt-12">
-                <form name="contact2" method="POST" data-netlify="true">
+                <form name="contact2" action="/success" method="POST" data-netlify="true">
                     <p>
                         <label>Your Name: <input type="text" name="name" /></label>
                     </p>
@@ -26,7 +26,7 @@ export default class ContactForm extends React.Component
                         <button type="submit">Send</button>
                     </p>
                 </form>
-                <form name="contact" action="/contact-success" method="POST" data-netlify="true"
+                <form name="contact" action="/success" method="POST" data-netlify="true"
                       enctype="application/x-www-form-urlencoded"
                       className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
                     <div>
