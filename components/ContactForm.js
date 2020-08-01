@@ -6,7 +6,8 @@ export default class ContactForm extends React.Component
     {
         return (
             <div className="mt-12">
-                <form name="contact" method="POST" data-netlify="true"
+                <form name="contact" action="/contact-success" method="POST" data-netlify="true"
+                      enctype="application/x-www-form-urlencoded"
                       className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
                     <div>
                         <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First
