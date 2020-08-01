@@ -6,6 +6,26 @@ export default class ContactForm extends React.Component
     {
         return (
             <div className="mt-12">
+                <form name="contact2" method="POST" data-netlify="true">
+                    <p>
+                        <label>Your Name: <input type="text" name="name" /></label>
+                    </p>
+                    <p>
+                        <label>Your Email: <input type="email" name="email" /></label>
+                    </p>
+                    <p>
+                        <label>Your Role: <select name="role[]" multiple>
+                            <option value="leader">Leader</option>
+                            <option value="follower">Follower</option>
+                        </select></label>
+                    </p>
+                    <p>
+                        <label>Message: <textarea name="message"></textarea></label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </form>
                 <form name="contact" action="/contact-success" method="POST" data-netlify="true"
                       enctype="application/x-www-form-urlencoded"
                       className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
