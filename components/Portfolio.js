@@ -142,6 +142,7 @@ export class FeaturedPortfolio extends React.Component
             <Portfolio
                 portfolioWorks={featuredPortfolioWorks}
                 bottomElement={<ViewEntirePortfolioButton text={"See our work"} url={'/portfolio'} />}
+                hidePatterns={true}
                 {...this.props}
             />
         );
@@ -192,7 +193,7 @@ class Portfolio extends React.Component
                     <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
                         { works }
                     </div>
-                    <BackgroundPattern />
+                    {!this.props.hidePatterns && <BackgroundPattern /> }
                 </div>
                 { this.props.bottomElement }
             </div>
