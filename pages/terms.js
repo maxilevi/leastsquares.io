@@ -147,17 +147,6 @@ export default class Terms extends React.Component {
                                             terms of service.
                                         </p>
                                     </li>
-                                    <li>
-                                        <h3>
-                                            8. Governing Law
-                                        </h3>
-                                        <p>
-                                            These terms and conditions are governed by and construed in
-                                            accordance with the laws of Massachusetts and you
-                                            irrevocably submit to the exclusive jurisdiction of the
-                                            courts in that State or location.
-                                        </p>
-                                    </li>
                                 </ul>
                             </div>
                         }

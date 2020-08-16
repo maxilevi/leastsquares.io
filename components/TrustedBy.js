@@ -9,7 +9,7 @@ const logos = [
     {name: 'Tensorflow', url: '/assets/icons/tensorflow.svg'},
 
     {name: 'GraphQL', url: '/assets/icons/graphql.svg'},
-    {name: 'AWS', url: '/assets/icons/aws.svg'},
+    {name: 'Node.Js', url: '/assets/icons/nodejs.svg'},
     {name: 'Next.JS', url: '/assets/icons/nextjs.svg'},
     {name: 'Android', url: '/assets/icons/android.svg'},
     {name: 'Unity', url: '/assets/icons/unity.svg'}
