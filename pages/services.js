@@ -101,7 +101,7 @@ export default function Blog()
                     />
                     <SectionSeparator size={1} />
                     <BackgroundWithText
-                        title="We create solutions for your problems."
+                        title="We create powerful solutions for your problems."
                         description="We can tackle any challenge."
                         padding={0}
                         element={<div/>}
