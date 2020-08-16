@@ -4,13 +4,13 @@ import React from "react";
 const logos = [
     {name: 'Laravel', url: '/assets/icons/laravel.svg'},
     {name: 'Go', url: '/assets/icons/go.svg'},
-    {name: 'Steam', url: '/assets/icons/steam.svg'},
+    {name: 'Shopify', url: '/assets/icons/shopify.svg'},
     {name: 'React', url: '/assets/icons/react.svg'},
     {name: 'Tensorflow', url: '/assets/icons/tensorflow.svg'},
 
     {name: 'GraphQL', url: '/assets/icons/graphql.svg'},
     {name: 'AWS', url: '/assets/icons/aws.svg'},
-    {name: 'Next.Js', url: '/assets/icons/nextjs.svg'},
+    {name: 'Next.JS', url: '/assets/icons/nextjs.svg'},
     {name: 'Android', url: '/assets/icons/android.svg'},
     {name: 'Unity', url: '/assets/icons/unity.svg'}
 ];
