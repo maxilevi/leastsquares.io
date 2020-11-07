@@ -14,8 +14,8 @@ import Head from "next/head";
 const companyName = 'LeastSquares';
 const companyCompleteName = companyName + ', Inc';
 const companySlogan = 'We find the solution that best minimizes all your problems.';
-const logoSourceVertical = "assets/logo_vertical.svg";//"https://tailwindui.com/img/logos/workflow-mark-on-white.svg";
-const logoSourceHorizontal = "assets/logo_white_horizontal.svg";
+const logoSourceVertical = "/assets/logo_vertical.svg";//"https://tailwindui.com/img/logos/workflow-mark-on-white.svg";
+const logoSourceHorizontal = "/assets/logo_white_horizontal.svg";
 
 const headerSections = [
     {isFirst: true, name: 'What we do', href: '/services'},
