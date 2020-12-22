@@ -15,10 +15,10 @@ const featuredPortfolioWorks = [
         projectUrl: 'https://store.steampowered.com/app/1009960/Project_Hedra/'
     },
     {
-        projectName: 'Hegemony',
-        projectImage: '/assets/hegemony.jpg',
-        projectDescription: 'Fullstack development for Hegemony\'s website. Improved & enhanced the existing Laravel codebase and added new features such as support for Stripe and PayPal subscriptions and purchases and a SSO integration with Hegemony\'s forum.',
-        projectUrl: 'https://hegemony.xyz'
+        projectName: 'Mercado Libre Synchronizer',
+        projectImage: '/assets/meli-sync.jpg',
+        projectDescription: 'Mercado Libre Synchronizer is a Shopify app that helps maintain your store in sync with your Mercado Libre listings. Built using NodeJS and React, currently deployed as a SaaS app in the Shopify app store.',
+        projectUrl: 'https://apps.shopify.com/meli-sync'
     },
     {
         projectName: 'Farmtale',
@@ -27,17 +27,25 @@ const featuredPortfolioWorks = [
         projectUrl: 'https://store.steampowered.com/app/1231520/Farmtale/'
     },
     {
+        projectName: 'Hegemony',
+        projectImage: '/assets/hegemony.jpg',
+        projectDescription: 'Fullstack development for Hegemony\'s website. Improved & enhanced the existing Laravel codebase and added new features such as support for Stripe and PayPal subscriptions and purchases and a SSO integration with Hegemony\'s forum.',
+        projectUrl: 'https://hegemony.xyz'
+    },
+    {
         projectName: 'Unity BreakableWallsFX',
         projectImage: '/assets/breakablewallsfx.jpg',
         projectDescription: 'Unity C# plugin that utilizes Delaunay triangulation in order to allow walls to be broken in pieces in realtime. It\'s currently published on the Unity Asset Store.',
         projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
     },
+    /*
     {
         projectName: 'isosurface',
         projectImage: '/assets/isosurface.jpg',
         projectDescription: 'Academic web application that showcases different iso-surface extraction techniques on different volumes.',
         projectUrl: 'https://github.com/maxilevi/isosurface'
     },
+     */
     {
         projectName: 'UE4 RuntimeMeshSimplifier',
         projectImage: '/assets/runtimemeshsimplifier.jpg',
