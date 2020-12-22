@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build:style": "npx tailwindcss && npx tailwindcss build styles/index.css -o styles/tailwind.css",
+    "build:style": "tailwind build styles/index.css -o styles/tailwind.css",
     "start": "npm run build:style && next start",
     "build": "next build",
     "export": "next export",
@@ -40,9 +40,9 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.5",
+    "autoprefixer": "9.8.5",
     "gh-pages": "^3.1.0",
-    "postcss-cli": "^7.1.1",
+    "postcss-cli": "7.1.1",
     "tailwindcss": "1.5.1"
   }
 }
