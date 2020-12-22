@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build:style": "tailwind build styles/index.css -o styles/tailwind.css",
+    "build:style": "npx tailwindcss build styles/index.css -o styles/tailwind.css",
     "start": "npm run build:style && next start",
     "build": "next build",
     "export": "next export",
