@@ -71,7 +71,7 @@ export default class Footer extends React.Component
                 </div>
                 <div className="mt-12 border-t border-gray-200 pt-8">
                     <p className="text-base leading-6 text-gray-400 xl:text-center">
-                        &copy; 2020 {this.props.companyCompleteName}. All rights reserved.
+                        &copy; 2021 {this.props.companyCompleteName}. All rights reserved.
                     </p>
                 </div>
             </div>

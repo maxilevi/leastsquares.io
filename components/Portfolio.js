@@ -38,20 +38,18 @@ const featuredPortfolioWorks = [
         projectDescription: 'Unity C# plugin that utilizes Delaunay triangulation in order to allow walls to be broken in pieces in realtime. It\'s currently published on the Unity Asset Store.',
         projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
     },
-    /*
     {
         projectName: 'isosurface',
         projectImage: '/assets/isosurface.jpg',
         projectDescription: 'Academic web application that showcases different iso-surface extraction techniques on different volumes.',
         projectUrl: 'https://github.com/maxilevi/isosurface'
     },
-     */
     {
         projectName: 'UE4 RuntimeMeshSimplifier',
         projectImage: '/assets/runtimemeshsimplifier.jpg',
         projectDescription: 'UE4 C++ plugin that leverages existing open-source technologies to allow the user to simplify meshes at runtime without a performance penalty. It\'s currently published on the UE4 Marketplace.',
         projectUrl: 'https://www.unrealengine.com/marketplace/en-US/product/9053712c939f4091a897913c095357aa'
-    },
+    }
 ];
 
 const extraPortfolioWorks = [
