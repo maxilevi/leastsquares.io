@@ -39,12 +39,6 @@ const featuredPortfolioWorks = [
         projectUrl: 'https://assetstore.unity.com/packages/tools/particles-effects/breakable-walls-fx-148289'
     },
     {
-        projectName: 'isosurface',
-        projectImage: '/assets/isosurface.jpg',
-        projectDescription: 'Academic web application that showcases different iso-surface extraction techniques on different volumes.',
-        projectUrl: 'https://github.com/maxilevi/isosurface'
-    },
-    {
         projectName: 'UE4 RuntimeMeshSimplifier',
         projectImage: '/assets/runtimemeshsimplifier.jpg',
         projectDescription: 'UE4 C++ plugin that leverages existing open-source technologies to allow the user to simplify meshes at runtime without a performance penalty. It\'s currently published on the UE4 Marketplace.',
@@ -70,8 +64,16 @@ const extraPortfolioWorks = [
         projectImage: '/assets/nqp.jpg',
         projectDescription: 'Open source 2D roguelike game made in Python. Core tasks were improving the overall quality of the codebase, implementing several core systems and adding missing infrastructure such as unit-testing.',
         projectUrl: 'https://github.com/Snayff/notquiteparadise'
-    }
+    },
 ];
+/*
+*     {
+        projectName: 'isosurface',
+        projectImage: '/assets/isosurface.jpg',
+        projectDescription: 'Academic web application that showcases different iso-surface extraction techniques on different volumes.',
+        projectUrl: 'https://github.com/maxilevi/isosurface'
+    },
+* */
 
 const fullPortfolioWorks = featuredPortfolioWorks.concat(extraPortfolioWorks);
 
